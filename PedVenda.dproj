@@ -83,8 +83,8 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <DCC_ExeOutput>D:\Projetos\Projetos em Delphi\Pedido Venda\</DCC_ExeOutput>
-        <DCC_DcpOutput>D:\Projetos\Projetos em Delphi\Pedido Venda\</DCC_DcpOutput>
+        <DCC_ExeOutput>C:\Users\sgp\Downloads\wellington\Pedido Venda\PedVenda\</DCC_ExeOutput>
+        <DCC_DcpOutput>C:\Users\sgp\Downloads\wellington\Pedido Venda\PedVenda\</DCC_DcpOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
@@ -142,6 +142,15 @@
                     <Source Name="MainSource">PedVenda.dpr</Source>
                 </Source>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\21.0\Bpl\dxRichEditDocumentModelRS27.bpl">ExpressRichEdit Control Document Model by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\21.0\Bpl\dxRichEditCoreRS27.bpl">ExpressRichEdit Control Core Library by Developer Express Inc.</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDS)\componentes\DevExpress\DevExpress\VCL\Library\RS27\dcldxSkinsCoreRS27.bpl">File c:\program files (x86)\embarcadero\studio\21.0\componentes\DevExpress\DevExpress\VCL\Library\RS27\dcldxSkinsCoreRS27.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDS)\componentes\DevExpress\DevExpress\VCL\Library\RS27\dcldxSkinsDesignHelperRS27.bpl">File c:\program files (x86)\embarcadero\studio\21.0\componentes\DevExpress\DevExpress\VCL\Library\RS27\dcldxSkinsDesignHelperRS27.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDS)\componentes\DevExpress\DevExpress\VCL\Library\RS27\dcldxSkinsFluentDesignFormWizardRS27.bpl">File c:\program files (x86)\embarcadero\studio\21.0\componentes\DevExpress\DevExpress\VCL\Library\RS27\dcldxSkinsFluentDesignFormWizardRS27.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDS)\componentes\DevExpress\DevExpress\VCL\Library\RS27\dxPScxPCProdRS27.bpl">File c:\program files (x86)\embarcadero\studio\21.0\componentes\DevExpress\DevExpress\VCL\Library\RS27\dxPScxPCProdRS27.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDS)\componentes\DevExpress\DevExpress\VCL\Library\RS27\dclcxGridEMFRS27.bpl">File c:\program files (x86)\embarcadero\studio\21.0\componentes\DevExpress\DevExpress\VCL\Library\RS27\dclcxGridEMFRS27.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDS)\componentes\DevExpress\DevExpress\VCL\Library\RS27\dclcxGridWizardEMFExtensionRS27.bpl">File c:\program files (x86)\embarcadero\studio\21.0\componentes\DevExpress\DevExpress\VCL\Library\RS27\dclcxGridWizardEMFExtensionRS27.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDS)\componentes\DevExpress\DevExpress\VCL\Library\RS27\dcldxGanttControlRS27.bpl">File c:\program files (x86)\embarcadero\studio\21.0\componentes\DevExpress\DevExpress\VCL\Library\RS27\dcldxGanttControlRS27.bpl not found</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>

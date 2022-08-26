@@ -12,17 +12,16 @@ object dmConexoes: TdmConexoes
   object conexao: TFDConnection
     Params.Strings = (
       'Database=wksistema'
-      'Password=97874697'
+      'Password=123456'
       'User_Name=root'
-      'UseSSL=True'
       'DriverID=MySQL')
     LoginPrompt = False
-    Left = 48
+    Left = 40
     Top = 16
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'libmariadb.dll'
-    Left = 152
-    Top = 88
+    VendorLib = 'libmysql.dll'
+    Left = 128
+    Top = 16
   end
 end

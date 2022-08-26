@@ -4,7 +4,7 @@ object frmPedidoVenda: TfrmPedidoVenda
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Pedido Venda'
-  ClientHeight = 691
+  ClientHeight = 698
   ClientWidth = 989
   Color = clWindow
   Font.Charset = DEFAULT_CHARSET
@@ -27,6 +27,7 @@ object frmPedidoVenda: TfrmPedidoVenda
     Color = clTeal
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = -3
     object lblStatus: TLabel
       Left = 803
       Top = 20
@@ -148,6 +149,33 @@ object frmPedidoVenda: TfrmPedidoVenda
         ExplicitWidth = 118
       end
     end
+    object pnlCancelaInsercao: TPanel
+      Left = 151
+      Top = 12
+      Width = 128
+      Height = 41
+      Color = clActiveCaption
+      ParentBackground = False
+      TabOrder = 4
+      object btnCancelaInsercao: TSpeedButton
+        Left = 1
+        Top = 1
+        Width = 126
+        Height = 39
+        Align = alClient
+        Caption = 'CANCELAR INSER'#199#195'O'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        OnClick = btnCancelaInsercaoClick
+        ExplicitLeft = 51
+        ExplicitTop = 0
+      end
+    end
   end
   object grpBuscaCliente: TGroupBox
     Left = 233
@@ -191,7 +219,7 @@ object frmPedidoVenda: TfrmPedidoVenda
       object lblCliente: TLabel
         Left = 262
         Top = 16
-        Width = 355
+        Width = 186
         Height = 26
         Caption = '                               '
         Font.Charset = ANSI_CHARSET
@@ -267,9 +295,9 @@ object frmPedidoVenda: TfrmPedidoVenda
   end
   object grbDadosProduto: TGroupBox
     Left = 7
-    Top = 127
+    Top = 128
     Width = 443
-    Height = 258
+    Height = 464
     Color = clMedGray
     ParentBackground = False
     ParentColor = False
@@ -342,7 +370,7 @@ object frmPedidoVenda: TfrmPedidoVenda
     end
     object Shape4: TShape
       Left = 11
-      Top = 182
+      Top = 355
       Width = 237
       Height = 59
       Pen.Color = clWhite
@@ -350,7 +378,7 @@ object frmPedidoVenda: TfrmPedidoVenda
     end
     object Label7: TLabel
       Left = 14
-      Top = 160
+      Top = 333
       Width = 89
       Height = 16
       Alignment = taCenter
@@ -418,8 +446,8 @@ object frmPedidoVenda: TfrmPedidoVenda
       OnChange = edtCodigoProdutoChange
     end
     object pnlAdicionar: TPanel
-      Left = 275
-      Top = 192
+      Left = 9
+      Top = 181
       Width = 120
       Height = 41
       Color = clTeal
@@ -463,7 +491,7 @@ object frmPedidoVenda: TfrmPedidoVenda
     end
     object edtSubTotal: TEdit
       Left = 26
-      Top = 193
+      Top = 366
       Width = 199
       Height = 37
       TabStop = False
@@ -498,9 +526,9 @@ object frmPedidoVenda: TfrmPedidoVenda
   end
   object GroupBox3: TGroupBox
     Left = 454
-    Top = 127
+    Top = 128
     Width = 531
-    Height = 498
+    Height = 463
     Color = clMedGray
     ParentBackground = False
     ParentColor = False
@@ -523,7 +551,7 @@ object frmPedidoVenda: TfrmPedidoVenda
       Left = 14
       Top = 30
       Width = 505
-      Height = 435
+      Height = 381
       DataSource = dtsProdutos
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -575,26 +603,27 @@ object frmPedidoVenda: TfrmPedidoVenda
         end>
     end
   end
-  object GroupBox4: TGroupBox
-    Left = 8
-    Top = 391
-    Width = 442
-    Height = 234
-    Color = clMedGray
+  object pnlRodape: TPanel
+    Left = 0
+    Top = 590
+    Width = 989
+    Height = 108
+    Align = alBottom
+    Color = clTeal
     ParentBackground = False
-    ParentColor = False
     TabOrder = 4
+    ExplicitLeft = 1
     object Shape10: TShape
-      Left = 14
-      Top = 71
-      Width = 416
-      Height = 130
+      Left = 639
+      Top = 15
+      Width = 281
+      Height = 70
       Pen.Color = clWhite
       Shape = stRoundRect
     end
     object Label16: TLabel
-      Left = 18
-      Top = 25
+      Left = 486
+      Top = 33
       Width = 123
       Height = 25
       Alignment = taCenter
@@ -608,10 +637,10 @@ object frmPedidoVenda: TfrmPedidoVenda
     end
     object edtTotalVenda: TEdit
       AlignWithMargins = True
-      Left = 67
-      Top = 88
-      Width = 286
-      Height = 85
+      Left = 660
+      Top = 28
+      Width = 243
+      Height = 49
       Alignment = taCenter
       BorderStyle = bsNone
       Font.Charset = DEFAULT_CHARSET
@@ -624,17 +653,6 @@ object frmPedidoVenda: TfrmPedidoVenda
       TabOrder = 0
     end
   end
-  object pnlRodape: TPanel
-    Left = 0
-    Top = 626
-    Width = 989
-    Height = 65
-    Align = alBottom
-    Color = clTeal
-    ParentBackground = False
-    TabOrder = 5
-    ExplicitTop = 706
-  end
   object grbPedido: TGroupBox
     Left = 7
     Top = 68
@@ -643,7 +661,7 @@ object frmPedidoVenda: TfrmPedidoVenda
     Color = clMedGray
     ParentBackground = False
     ParentColor = False
-    TabOrder = 6
+    TabOrder = 5
     object Shape8: TShape
       Left = 82
       Top = 9

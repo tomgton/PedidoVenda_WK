@@ -29,15 +29,11 @@ type
     GroupBox3: TGroupBox;
     Label9: TLabel;
     DBGrid1: TDBGrid;
-    GroupBox4: TGroupBox;
-    Shape10: TShape;
-    Label16: TLabel;
     Shape5: TShape;
     Label10: TLabel;
     pnlRodape: TPanel;
     edtCodigoProduto: TEdit;
     pnlAdicionar: TPanel;
-    edtTotalVenda: TEdit;
     btnAdicionar: TSpeedButton;
     pnlIniciaVenda: TPanel;
     btnIniciarVenda: TSpeedButton;
@@ -72,6 +68,11 @@ type
     btnCarregarPedido: TSpeedButton;
     pnlGravarPedido: TPanel;
     btnGravarPedido: TSpeedButton;
+    Shape10: TShape;
+    edtTotalVenda: TEdit;
+    Label16: TLabel;
+    pnlCancelaInsercao: TPanel;
+    btnCancelaInsercao: TSpeedButton;
     procedure btnClienteClick(Sender: TObject);
     procedure edtCodigoProdutoChange(Sender: TObject);
     procedure btnGravarPedidoClick(Sender: TObject);
@@ -87,6 +88,7 @@ type
     procedure edtValorUnitarioChange(Sender: TObject);
     procedure btnCancelarPedidoClick(Sender: TObject);
     procedure btnCarregarPedidoClick(Sender: TObject);
+    procedure btnCancelaInsercaoClick(Sender: TObject);
   private
     function criaPedido : integer;
     procedure carregaPedido;
@@ -186,6 +188,12 @@ begin
 
 end;
 
+
+procedure TfrmPedidoVenda.btnCancelaInsercaoClick(Sender: TObject);
+begin
+  limpaCampos;
+  QryProdutos.Close;
+end;
 
 procedure TfrmPedidoVenda.btnCancelarPedidoClick(Sender: TObject);
 var numeropedido : string;
@@ -455,16 +463,17 @@ end;
 
 procedure TfrmPedidoVenda.habilitaBotoes(value: Boolean);
 begin
-  edtCodCliente.Enabled     := value;
-  edtCodigoProduto.Enabled  := value;
-  edtQuantidade.Enabled     := value;
-  edtNumeroPedido.Enabled   := not(value);
-  btnAdicionar.Enabled      := value;
-  btnCliente.Enabled        := value;
-  pnlGravarPedido.Visible   := value;
-  pnlIniciaVenda.Visible    := not(value);
-  pnlCarregaPedido.Visible  := not(value);
-  pnlCancelarPedido.Visible := not(value);
+  edtCodCliente.Enabled      := value;
+  edtCodigoProduto.Enabled   := value;
+  edtQuantidade.Enabled      := value;
+  edtNumeroPedido.Enabled    := not(value);
+  btnAdicionar.Enabled       := value;
+  btnCliente.Enabled         := value;
+  pnlGravarPedido.Visible    := value;
+  pnlIniciaVenda.Visible     := not(value);
+  pnlCarregaPedido.Visible   := not(value);
+  pnlCancelarPedido.Visible  := not(value);
+  pnlCancelaInsercao.Visible := value;
 end;
 
 procedure TfrmPedidoVenda.limpaCampos;
