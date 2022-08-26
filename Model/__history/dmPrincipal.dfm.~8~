@@ -1,0 +1,21 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 150
+  Width = 215
+  object Conexao: TFDConnection
+    Params.Strings = (
+      'User_Name=root'
+      'Server=localhost'
+      'Database=wksistema'
+      'Password=97874697'
+      'UseSSL=True'
+      'DriverID=MySQL')
+    TxOptions.Params.Strings = (
+      'read_committed'
+      'rec_version'
+      'nowait')
+    LoginPrompt = False
+    Left = 143
+    Top = 8
+  end
+end

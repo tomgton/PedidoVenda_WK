@@ -1,0 +1,37 @@
+unit DAO_Produtos;
+
+interface
+
+type TProdutos = class
+
+private
+    Fdescricao: string;
+    FcodigoProduto: integer;
+    FprecoVenda: double;
+
+public
+
+  property codigoProduto: integer  read FcodigoProduto write FcodigoProduto;
+  property descricao: string  read Fdescricao write Fdescricao;
+  property precoVenda: double  read FprecoVenda write FprecoVenda;
+
+  procedure listarProdutoCodigo;
+
+end;
+
+
+implementation
+
+
+procedure TProdutos.listarProdutoCodigo;
+begin
+   dmconexoes.qryClientes.close;
+   dmconexoes.qryClientes.SQL.Clear;
+   dmconexoes.qryClientes.SQL.Add('select codigo_cliente, nome from clientes where codigo_cliente = :codigocliente');
+   dmconexoes.qryClientes.ParamByName('codigocliente').AsInteger := FcodigoCliente;
+   dmconexoes.qryClientes.open;
+
+   Fnome := dmconexoes.qryClientes.FieldByName('nome').AsString;
+end;
+
+end.

@@ -1,0 +1,24 @@
+unit DAO_Cliente;
+
+interface
+
+type TCliente = class
+
+private
+    Fuf: Integer;
+    Fnome: Integer;
+    Fcidade: Integer;
+
+public
+
+  property codigoCliente : Integer  read FcodigoCliente write FCodigoCliente
+  property nome : String  read Fnome write Fnome;
+  property cidade : Integer  read Fcidade write Fcidade;
+  property uf : Integer  read Fuf write Fuf;
+
+
+end;
+
+implementation
+
+end.

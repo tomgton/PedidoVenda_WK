@@ -1,0 +1,33 @@
+object dmConexoes: TdmConexoes
+  OldCreateOrder = False
+  Height = 150
+  Width = 215
+  object Conexao: TFDConnection
+    Params.Strings = (
+      'User_Name=root'
+      'Server=localhost'
+      'Database=wksistema'
+      'Password=97874697'
+      'UseSSL=True'
+      'DriverID=MySQL')
+    TxOptions.Params.Strings = (
+      'read_committed'
+      'rec_version'
+      'nowait')
+    LoginPrompt = False
+    Left = 143
+    Top = 8
+  end
+  object qryClientes: TFDQuery
+    Connection = Conexao
+    Left = 40
+    Top = 64
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 
+      'D:\Projetos\Projetos em Delphi\Pedido Venda\Win32\Debug\libmysql' +
+      '.dll'
+    Left = 136
+    Top = 72
+  end
+end

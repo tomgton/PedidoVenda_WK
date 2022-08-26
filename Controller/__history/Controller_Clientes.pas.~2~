@@ -1,0 +1,28 @@
+unit Controller_Clientes;
+
+
+interface
+
+
+uses  DAO_Clientes;
+
+type TController_Cliente = class
+     private
+
+     public
+
+     procedure listaCliente(const cCliente: TClientes);
+
+     end;
+
+implementation
+
+
+{ TController_Cliente }
+
+procedure TController_Cliente.listaCliente(const cCliente: TClientes);
+begin
+  //
+end;
+
+end.

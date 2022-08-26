@@ -1,0 +1,134 @@
+unit DAO_ItemsPedido;
+
+interface
+
+uses
+  FireDAC.Comp.Client;
+
+type TItemsPedido = class
+
+private
+
+    FcodigoProduto: integer;
+    FvalorUnitario: double;
+    FvalorTotal: double;
+    Fquantidade: double;
+    FnumeroPedido: integer;
+    FQry: TFDMemTable;
+
+    QryItem : TFDMemTable;
+
+    procedure SetQry(const Value: TFDMemTable);
+
+public
+
+
+  property numeroPedido: integer  read FnumeroPedido write FnumeroPedido;
+  property codigoProduto: integer  read FcodigoProduto write FcodigoProduto;
+  property quantidade: double  read Fquantidade write Fquantidade;
+  property valorUnitario: double  read FvalorUnitario write FvalorUnitario;
+  property valorTotal: double  read FvalorTotal write FvalorTotal;
+  property Qry : TFDMemTable read FQry write SetQry;
+
+  procedure criaItemsPedido;
+  procedure cancelaItemsPedido;
+  procedure listarItemsPedido;
+
+end;
+
+
+implementation
+
+uses DmPrincipal;
+
+procedure TItemsPedido.cancelaItemsPedido;
+var QryItemPedido : TFDQuery;
+begin
+  QryItemPedido := TFDQuery.Create(nil);
+  QryItemPedido.Connection := dmConexoes.Conexao;
+
+  try
+
+    QryItemPedido.close;
+    QryItemPedido.SQL.Add('delete from pedidos where numero_pedido = :numero_pedido');
+    QryItemPedido.ParamByName('numero_pedido').AsInteger := FnumeroPedido;
+    QryItemPedido.ExecSQL;
+
+  finally
+    QryItemPedido.Free;
+  end;
+
+end;
+
+procedure TItemsPedido.criaItemsPedido;
+var QryItemPedido : TFDQuery;
+begin
+  QryItemPedido := TFDQuery.Create(nil);
+  QryItemPedido.Connection := dmConexoes.Conexao;
+
+  try
+    FQry.First;
+
+    while not FQry.Eof do
+    begin
+
+      QryItemPedido := TFDQuery.Create(nil);
+      QryItemPedido.Connection := dmConexoes.Conexao;
+
+
+      QryItemPedido.close;
+      QryItemPedido.SQL.Add('insert into items_pedido(numero_pedido, codigo_produto, quantidade, valor_unitario, valor_total)');
+      QryItemPedido.SQL.Add('values(:numeropedido, :codigoproduto, :quantidade, :valor_unitario, :valor_total)');
+
+      QryItemPedido.ParamByName('numeropedido').AsInteger    := FnumeroPedido;
+      QryItemPedido.ParamByName('codigoproduto').AsInteger   := FQry.FieldByname('codigo_produto').AsInteger;
+      QryItemPedido.ParamByName('quantidade').AsCurrency     := FQry.FieldByname('quantidade').AsCurrency;
+      QryItemPedido.ParamByName('valor_unitario').AsCurrency := FQry.FieldByname('valor_unitario').AsCurrency;
+      QryItemPedido.ParamByName('valor_total').AsCurrency    := FQry.FieldByname('valor_total').AsCurrency;
+
+      QryItemPedido.ExecSQL;
+
+      FQry.Next;
+
+    end;
+
+  finally
+    QryItemPedido.Free;
+  end;
+
+
+end;
+
+procedure TItemsPedido.listarItemsPedido;
+var QryItemsPedido : TFDQuery;
+begin
+
+  QryItemsPedido    := TFDQuery.Create(nil);
+  QryItem           := TFDMemTable.Create(nil);
+
+  try
+    QryItemsPedido.Connection := dmConexoes.Conexao;
+
+    QryItemsPedido.close;
+    QryItemsPedido.SQL.Add('select ip.codigo_produto, p.descricao, ip.quantidade, ip.valor_unitario, ip.valor_total from items_pedido ip');
+    QryItemsPedido.SQL.Add('inner join produtos p on ip.codigo_produto = p.codigo_produto');
+    QryItemsPedido.SQL.Add('where ip.numero_pedido = :numero_pedido');
+    QryItemsPedido.ParamByName('numero_pedido').AsInteger := FnumeroPedido;
+    QryItemsPedido.open;
+
+    QryItem.CloneCursor(QryItemsPedido);
+
+    FQry := QryItem;
+
+  finally
+    QryItemsPedido.Free;
+  end;
+
+end;
+
+procedure TItemsPedido.SetQry(const Value: TFDMemTable);
+begin
+  FQry := Value;
+end;
+
+end.

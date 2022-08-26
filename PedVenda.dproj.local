@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/03/31 00:02:27.000.598,=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/06/07 22:18:34.000.235,=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/04 23:10:38.000.414,=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/12 11:38:32.000.928,=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/12 11:47:01.000.493,=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/23 20:28:54.000.388,=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/23 20:30:01.000.109,D:\Projetos\Projetos em Delphi\Pedido Venda\uPedidoVenda.pas=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/23 20:30:01.000.109,D:\Projetos\Projetos em Delphi\Pedido Venda\uPedidoVenda.dfm=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/08/23 20:30:10.000.234,D:\Projetos\Projetos em Delphi\Pedido Venda\PedVenda.dproj=C:\Users\wellington\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/08/24 00:43:40.000.774,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 00:44:50.000.013,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 00:45:09.000.897,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\dmPrincipal.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 00:45:09.000.897,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\dmPrincipal.dfm=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.dfm</Transaction>
+    <Transaction>2022/08/24 00:49:11.000.598,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 00:52:01.000.935,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_Cliente.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 00:57:40.000.250,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 00:58:57.000.920,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_Pedido.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 01:03:48.000.106,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 01:08:29.000.502,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_ItemPedido.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 01:09:03.000.218,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_ItemsPedido.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_ItemPedido.pas</Transaction>
+    <Transaction>2022/08/24 01:09:10.000.372,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_Pedidos.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_Pedido.pas</Transaction>
+    <Transaction>2022/08/24 01:09:17.000.920,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_Clientes.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_Cliente.pas</Transaction>
+    <Transaction>2022/08/24 01:09:48.000.399,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 01:11:41.000.655,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_Produtos.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 08:28:39.000.173,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 08:28:57.000.210,D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.dfm=D:\Projetos\Projetos em Delphi\Pedido Venda\View\uClientes.dfm</Transaction>
+    <Transaction>2022/08/24 08:28:57.000.210,D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\View\uClientes.pas</Transaction>
+    <Transaction>2022/08/24 08:48:25.000.177,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 08:53:25.000.339,D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Controller\Controller_Clientes.pas</Transaction>
+    <Transaction>2022/08/24 17:48:40.000.315,=D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas</Transaction>
+    <Transaction>2022/08/24 17:49:42.000.373,D:\Projetos\Projetos em Delphi\Pedido Venda\Unit1.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Controller\Controller_Pedidos.pas</Transaction>
+    <Transaction>2022/08/26 01:31:53.133,D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_ItensPedido.pas=D:\Projetos\Projetos em Delphi\Pedido Venda\Model\DAO_ItemsPedido.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="RX8R7066LVA" Android64="RX8R7066LVA"/>
+	</ActiveMobileDevice>
+</BorlandProject>

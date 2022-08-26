@@ -1,0 +1,19 @@
+unit DAO_Pedido;
+
+TPedido = class
+
+private
+
+
+
+public
+
+
+
+end;
+
+interface
+
+implementation
+
+end.

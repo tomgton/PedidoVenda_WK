@@ -1,0 +1,16 @@
+program PedVenda;
+
+uses
+  Vcl.Forms,
+  uPedidoVenda in 'uPedidoVenda.pas' {frmPedidoVenda},
+  dmPrincipal in 'Model\dmPrincipal.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPedidoVenda, frmPedidoVenda);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

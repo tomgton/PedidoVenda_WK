@@ -1,0 +1,25 @@
+unit Controller_Clientes;
+
+interface
+
+type TController_Cliente = class
+     private
+       cClientes : TClientes;
+     public
+
+     procedure listaCliente;
+
+     end;
+
+implementation
+
+uses DAO_Clientes;
+
+{ TController_Cliente }
+
+procedure TController_Cliente.listaCliente;
+begin
+//
+end;
+
+end.

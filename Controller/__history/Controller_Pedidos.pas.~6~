@@ -1,0 +1,25 @@
+unit Controller_Pedidos;
+
+interface
+
+uses DAO_Pedidos;
+
+type TController_Pedidos = class
+     private
+
+
+     public
+        procedure criarPedido(const cPedidos : TPedidos);
+     end;
+
+implementation
+
+{ TController_Pedidos }
+
+procedure TController_Pedidos.criarPedido(const cPedidos: TPedidos);
+begin
+  cPedidos.criaPedido;
+
+end;
+
+end.

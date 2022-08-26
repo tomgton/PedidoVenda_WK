@@ -1,0 +1,25 @@
+unit DAO_Produtos;
+
+interface
+
+type TPedido = class
+
+private
+    Fdescricao: string;
+    FcodigoProduto: integer;
+    FprecoVenda: double;
+
+
+public
+
+  property codigoProduto: integer  read FcodigoProduto write FcodigoProduto;
+  property descricao: string  read Fdescricao write Fdescricao;
+  property precoVenda: double  read FprecoVenda write FprecoVenda;
+
+
+end;
+
+
+implementation
+
+end.

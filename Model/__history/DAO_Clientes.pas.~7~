@@ -1,0 +1,40 @@
+unit DAO_Clientes;
+
+interface
+
+type TClientes = class
+
+private
+    Fuf: String;
+    Fnome: String;
+    Fcidade: String;
+    FcodigoCliente : Integer;
+
+public
+
+  property codigoCliente : Integer  read FcodigoCliente write FCodigoCliente;
+  property nome : String  read Fnome write Fnome;
+  property cidade : String  read Fcidade write Fcidade;
+  property uf : String  read Fuf write Fuf;
+
+  procedure listarCLientes;
+
+
+end;
+
+implementation
+
+uses dmPrincipal, FireDAC.Comp.Client;
+
+{ TClientes }
+
+procedure TClientes.listarCLientes;
+begin
+   dmconexoes.qryClientes.close;
+   dmconexoes.qryClientes.SQL.Clear;
+   dmconexoes.qryClientes.SQL.Add('select codigo_cliente, nome from clientes where nome like %:nome%');
+   dmconexoes.qryClientes.parambyname('nome').AsString := Fnome;
+   dmconexoes.qryClientes.open;
+end;
+
+end.

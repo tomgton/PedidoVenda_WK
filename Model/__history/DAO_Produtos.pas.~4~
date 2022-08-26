@@ -1,0 +1,47 @@
+unit DAO_Produtos;
+
+interface
+
+uses
+  FireDAC.Comp.Client;
+
+type TProdutos = class
+
+private
+    Fdescricao: string;
+    FcodigoProduto: integer;
+    FprecoVenda: double;
+
+public
+
+  property codigoProduto: integer  read FcodigoProduto write FcodigoProduto;
+  property descricao: string  read Fdescricao write Fdescricao;
+  property precoVenda: double  read FprecoVenda write FprecoVenda;
+
+  procedure listarProdutoCodigo;
+
+end;
+
+
+implementation
+
+uses dmPrincipal;
+
+
+procedure TProdutos.listarProdutoCodigo;
+var QryProdutos : TFDQuery;
+begin
+   QryProdutos := TFDQuery.Create(nil);
+
+   QryProdutos.Connection := dmConexoes.conexao;
+
+   QryProdutos.close;
+   QryProdutosSQL.Clear;
+   QryProdutosSQL.Add('select codigo_cliente, nome from clientes where codigo_cliente = :codigocliente');
+   QryProdutosParamByName('codigocliente').AsInteger := FcodigoCliente;
+   QryProdutosopen;
+
+   Fnome := dmconexoes.qryClientes.FieldByName('nome').AsString;
+end;
+
+end.

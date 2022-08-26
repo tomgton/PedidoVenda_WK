@@ -1,0 +1,18 @@
+unit DAO_Cliente;
+
+interface
+
+type TCliente = class
+
+private
+
+public
+
+
+
+
+end;
+
+implementation
+
+end.

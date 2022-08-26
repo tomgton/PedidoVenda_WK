@@ -1,0 +1,30 @@
+unit DAO_ItemPedido;
+
+interface
+
+type TPedido = class
+
+private
+    FidItemsPedido: integer;
+    FcodigoProduto: string;
+    FvalorUnitario: double;
+    FvalorTotal: double;
+    Fquantidade: double;
+    FnumeroPedido: integer;
+
+
+public
+
+  property idItemsPedido: integer  read FidItemsPedido write FidItemsPedido;
+  property numeroPedido: integer  read FnumeroPedido write FnumeroPedido;
+  property codigoProduto: string  read FcodigoProduto write FcodigoProduto;
+  property quantidade: double  read Fquantidade write Fquantidade;
+  property valorUnitario: double  read FvalorUnitario write FvalorUnitario;
+  property valorTotal: double  read FvalorTotal write FvalorTotal;
+
+end;
+
+
+implementation
+
+end.

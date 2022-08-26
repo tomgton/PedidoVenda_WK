@@ -1,0 +1,80 @@
+unit DAO_ItemsPedido;
+
+interface
+
+uses
+  FireDAC.Comp.Client;
+
+type TItemsPedido = class
+
+private
+
+    FcodigoProduto: integer;
+    FvalorUnitario: double;
+    FvalorTotal: double;
+    Fquantidade: double;
+    FnumeroPedido: integer;
+    FQry: TFDMemTable;
+    procedure SetQry(const Value: TFDMemTable);
+
+public
+
+
+  property numeroPedido: integer  read FnumeroPedido write FnumeroPedido;
+  property codigoProduto: integer  read FcodigoProduto write FcodigoProduto;
+  property quantidade: double  read Fquantidade write Fquantidade;
+  property valorUnitario: double  read FvalorUnitario write FvalorUnitario;
+  property valorTotal: double  read FvalorTotal write FvalorTotal;
+  property Qry : TFDMemTable read FQry write SetQry;
+
+  procedure criaItemsPedido;
+
+end;
+
+
+implementation
+
+uses DmPrincipal;
+
+procedure TItemsPedido.criaItemsPedido;
+var QryItemPedido : TFDQuery;
+begin
+  QryItemPedido := TFDQuery.Create(nil);
+  QryItemPedido.Connection := dmConexoes.Conexao;
+
+
+    FQry.First;
+
+    while not FQry.Eof do
+    begin
+
+      QryItemPedido := TFDQuery.Create(nil);
+      QryItemPedido.Connection := dmConexoes.Conexao;
+
+
+      QryItemPedido.close;
+      QryItemPedido.SQL.Add('insert into items_pedido(numero_pedido, codigo_produto, quantidade, valor_unitario, valor_total)');
+      QryItemPedido.SQL.Add('values(:numeropedido, :codigoproduto, :quantidade, :valor_unitario, :valor_total)');
+
+      QryItemPedido.ParamByName('numeropedido').AsInteger    := FnumeroPedido;
+      QryItemPedido.ParamByName('codigoproduto').AsInteger   := FQry.FieldByname('codigo_produto').AsInteger;
+      QryItemPedido.ParamByName('quantidade').AsCurrency     := FQry.FieldByname('quantidade').AsCurrency;
+      QryItemPedido.ParamByName('valor_unitario').AsCurrency := FQry.FieldByname('valor_unitario').AsCurrency;
+      QryItemPedido.ParamByName('valor_total').AsCurrency    := FQry.FieldByname('valor_total').AsCurrency;
+
+      QryItemPedido.ExecSQL;
+
+      FQry.Next;
+
+    end;
+
+
+
+end;
+
+procedure TItemsPedido.SetQry(const Value: TFDMemTable);
+begin
+  FQry := Value;
+end;
+
+end.
