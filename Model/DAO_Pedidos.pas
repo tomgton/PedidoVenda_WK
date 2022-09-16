@@ -175,7 +175,7 @@ begin
     QryPedido.Connection := dmConexoes.Conexao;
 
     QryPedido.close;
-    QryPedido.SQL.Add('select max(codigo_pedido) as codigo_pedido from pedido from pedido');
+    QryPedido.SQL.Add('select max(codigo_pedido) as codigo_pedido from pedido');
     QryPedido.open;
 
     Result := QryPedido.FieldByname('codigo_pedido').AsInteger;
